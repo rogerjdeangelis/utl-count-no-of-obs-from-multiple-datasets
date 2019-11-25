@@ -2,8 +2,24 @@
 Count no of obs from multiple datasets
     SAS Forum: Count no of obs from multiple datasets                                                              
                                                                                                                    
-    * very fast on muti-core multi-channel systems like teradata;                                                  
-                                                                                                                   
+     Prefered solution                                                    
+                                                                         
+    Keintz, Mark                                                         
+    mkeintz@wharton.upenn.edu                                            
+                                                                         
+    data a b c d e f g h I j k l m n o p q r s t u v w x y z;            
+      set sashelp.class;                                                 
+    run;                                                                 
+                                                                         
+    data _null_;                                                         
+      set a b c d e f g h I j k l m n o p q r s t u v w x y z nobs=nall; 
+      put nall=;                                                         
+      stop;                                                              
+    run;                                                                 
+                                                                         
+    NALL=494                                                             
+                                                                                                                 
+    As a side note count(*) gets the mumber of obs from metat adta                                                                                                              
     SAS Forum                                                                                                      
     https://tinyurl.com/smze67n                                                                                    
     https://communities.sas.com/t5/SAS-Programming/Count-no-of-obs-from-multiple-datasets/m-p/606885               
