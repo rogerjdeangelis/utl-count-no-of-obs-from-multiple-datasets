@@ -1,6 +1,27 @@
 Count no of obs from multiple datasets                                                                 
                                                                                                        
-* very fast on muti-core multi-channel systems like teradata;                                          
+Prefered Solution by                                                      
+                                                                          
+Keintz, Mark                                                              
+mkeintz@wharton.upenn.edu                                                 
+                                                                          
+data a b c d e f g h I j k l m n o p q r s t u v w x y z;                 
+                                                                          
+  set sashelp.class;                                                      
+                                                                          
+run;                                                                      
+                                                                          
+data _null_;                                                              
+                                                                          
+  set a b c d e f g h I j k l m n o p q r s t u v w x y z nobs=nall;      
+                                                                          
+  put nall=;                                                              
+                                                                          
+  stop;                                                                   
+                                                                          
+run;                                                                      
+                                                                          
+                             
                                                                                                        
 SAS Forum                                                                                              
 https://tinyurl.com/smze67n                                                                            
